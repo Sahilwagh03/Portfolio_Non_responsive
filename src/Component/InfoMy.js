@@ -1,21 +1,19 @@
 import React from 'react'
-import Typed from 'react-typed'
+import {useTypewriter,Cursor} from 'react-simple-typewriter'
 export default function InfoMy() {
-  
+  const {text} = useTypewriter({
+    words: ['Sahil', 'Coder','Gamer'],
+    loop: {},
+    typeSpeed:80,
+    delaySpeed:50
+  });
   return (
     <div className='wrapper'>
       <div className="cols cols0">
         <span className="topline">Hello</span>
-        <h1>I'm<span className="multiText"><Typed
-        strings={[
-          "Sahil",
-          "Coder",
-          "Gamer"
-        ]}
-        typeSpeed={100}
-        backSpeed={80}
-        loop
-        /></span></h1>
+        <h1>I'm<span className="multiText">
+          {text}
+          </span></h1>
         <p>I am constantly looking for ways to improve my skills and stay
 						up-to-date with the latest developments in the field. Overall, I am confident in my
 						ability to write efficient and effective code for a wide range of projects.
